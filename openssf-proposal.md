@@ -23,7 +23,7 @@ Enterprise authorization governance programs should have three core objectives: 
 
 IGA was designed to govern applications which implement role based access control (RBAC). Today's policy engines offer greater expressiveness then RBAC, but also introduce new governance challenges. As policies evolve from simple role mappings to condition-rich logic spanning multiple attributes, identity tokens, and distributed services, the effective permission surface becomes too complex for IGA-style access certification. New abstractions, metrics, and analysis techniques are required to make modern policy ecosystems understandable and governable. Addressing this gap is a central motivation for GovOps.
 
-Developing these new governance practices requires collaboration among experts, vendors, and open-source communities with deep experience in identity, authorization, and distributed systems. The motivation for forming the GovOps Working Group under the OpenSSF is to create shared frameworks, terminology, models, and operational best practices necessary for consistent security governance across multi-domain, distributed software environments.
+Developing these new governance practices requires collaboration among experts, vendors, and open-source communities with deep experience in identity, authorization, and distributed systems. The motivation for forming the GovOps Working Group under the OpenSSF is to create shared frameworks, terminology, models, and operational best practices necessary for consistent authorization governance across multi-domain, distributed software environments.
 
 ---
 
