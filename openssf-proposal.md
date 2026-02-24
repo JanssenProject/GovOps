@@ -160,6 +160,7 @@ This proposal is supported by **at least three individuals from at least two org
 | [Rohit Khare](https://www.linkedin.com/in/rohitkhare/) | Independent | Proponent, Contributor |
 | [Darran Rolls](mailto:darran@identityinnovationlabs.com) | Independent | Contributor |
 | [Dinesh Rajasekharan](https://www.linkedin.com/in/dineshrajasekharan/) | Amazon | Contributor |
+| [Dhaval Desai](https://www.linkedin.com/in/dhavaltdesai/) | Gluu | Contributor | 
 | [André Koot](https://www.linkedin.com/in/meneer/) | SonicBee | Contributor |
 | [Amie Dsouza](https://www.linkedin.com/in/amie-amrita-dsouza-48b6537/) | Independent | Contributor |
 | [Bernard Diwakar](https://www.linkedin.com/in/bernarddiwakar/) | Intuit | Contributor |
