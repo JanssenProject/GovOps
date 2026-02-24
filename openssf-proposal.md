@@ -27,7 +27,7 @@ Developing these new governance practices requires collaboration among experts, 
 
 ---
 
-## **4\. Objective**
+## **3\. Objective**
 
 The objective of GovOps is to define and operationalize **governance-as-ops**: a continuous, measurable, and accountable discipline that allows humans to understand, prioritize, and reduce software security risk at scale.
 
@@ -66,7 +66,7 @@ In short, the objective of GovOps is to transform governance from a retrospectiv
 
 ---
 
-## **5\. Scope**
+## **4\. Scope**
 
 ### **In Scope**
 
@@ -88,7 +88,7 @@ The WG will **not**:
 
 ---
 
-## **4\. Relationship to Existing OpenSSF Initiatives**
+## **5\. Relationship to Existing OpenSSF Initiatives**
 
 | Existing Initiative | Relationship | Distinction |
 | :---- | ----- | ----- |
@@ -102,7 +102,7 @@ GovOps is a specific response to the need for formalization of a new practice an
 
 ---
 
-## **5\. Intended Deliverables**
+## **6\. Intended Deliverables**
 
 ### **Initial Deliverables (12 months)**
 
@@ -123,7 +123,7 @@ GovOps is a specific response to the need for formalization of a new practice an
 
 ---
 
-## **6\. Meeting Times**
+## **7\. Meeting Times**
 
 | Effort | Meeting Times | Agenda / Mtg Notes | Git Repo | Slack Channel | Mailing List |
 | :---- | :---- | :---- | :---- | :---- | :---- |
@@ -134,11 +134,8 @@ GovOps is a specific response to the need for formalization of a new practice an
 
 ---
 
-## **7\.** 
 
----
-
-## **7\. Governance and Operations**
+## **8\. Governance and Operations**
 
 **Meeting Cadence:**  
 Weekly, public
@@ -152,7 +149,7 @@ Consensus-based, per OpenSSF norms
 * OpenSSF Slack channel  
 * Public meeting notes and recordings
 
-## **8\. Initial Participants and Community Support**
+## **9\. Initial Participants and Community Support**
 
 This proposal is supported by **at least three individuals from at least two organizations**.
 
@@ -160,7 +157,7 @@ This proposal is supported by **at least three individuals from at least two org
 | ----- | ----- | ----- |
 | [Michael Schwartz](https://www.linkedin.com/in/nynymike) | Gluu | Proponent, Contributor |
 | [Rohit Khare](https://www.linkedin.com/in/rohitkhare/) | Independent | Proponent, Contributor |
-| [Amie Dsouza](https://www.linkedin.com/in/amie-amrita-dsouza-48b6537/) | Schwab | Contributor |
+| [Amie Dsouza](https://www.linkedin.com/in/amie-amrita-dsouza-48b6537/) | Independent | Contributor |
 | [Dinesh Rajasekharan](https://www.linkedin.com/in/dineshrajasekharan/) | Amazon | Contributor |
 | [Ravindra Neriyanuri](https://www.linkedin.com/in/ACoAAAARN2UB8NtUXyamGuRr52KppXTzVG2ltuo) | Independent | Contributor |
 | [André Koot](https://www.linkedin.com/in/meneer/) | SonicBee | Contributor |
