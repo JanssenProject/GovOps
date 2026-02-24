@@ -94,7 +94,7 @@ The WG will **not**:
 
 | Existing Initiative | Relationship | Distinction |
 | :---- | ----- | ----- |
-| Global Cyber Policy WG | Complementary | Compliance doesn't detail how to govern authorization policies. |
+| Global Cyber Policy WG | Complementary | GovOps defines how to govern authorization policies and continuous assurance |
 | Gamara Project | Complementary | The model and lexicon defined by Gamara will be used in GovOps |
 | Supply Chain Integrity WG | Adjacent | GovOps defines policy and decision artifacts, not software provenance. |
 | Best Practices WG | Complementary | GovOps defines operational governance, not coding practices. |
@@ -119,7 +119,7 @@ GovOps is a specific response to the need for formalization of a new practice an
    * **Cedar Policy Store Specification**
      1. [Cedar RFC 101](https://github.com/cedar-policy/rfcs/pull/101)- Defines a portable, versioned, interoperable format for storing Cedar policies, schemas, entities, and issuer metadata.   
    * **Govops Schema**  
-     1. Standards for defining authorization policy schema in use -- the entities, entity properties, action and resources that are valid for policy.  
+     1. Standards for defining authorization policy schemas—entities, entity properties, actions, and resources—so policies are interoperable and analyzable.
 
 ---
 
@@ -146,8 +146,8 @@ Consensus-based, per OpenSSF norms
 **Communication Channels:**
 
 * GitHub repository (WG \+ project)
-* Linkedin Group
 * OpenSSF Slack channel
+* Linkedin Group (which has stronger identity proofing)
 * Public meeting notes and recordings
 
 ## **9. Initial Participants and Community Support**
@@ -186,7 +186,7 @@ The TAC Sponsor agrees to:
 
 ## **11. Requested TAC Action**
 
-The proponents respectfully request that the TAC:
+The proponents request that the TAC approve the GovOps Working Group at Sandbox stage and endorse incubation of the Cedar Policy Store specification as the WG’s first deliverable:
 
 ☐ Review the proposed GovOps WG scope  
 ☐ Confirm limited overlap with existing initiatives  
@@ -197,14 +197,11 @@ The proponents respectfully request that the TAC:
 
 ## **12. References**
 
-* GovOps overview and motivation: [https://gluu.co/govops](https://gluu.co/govops)  
-* GovOps metrics model: [https://gluu.co/govops-metrics](https://gluu.co/govops-metrics)  
-* GovOps manifesto: [https://gluu.co/govops-manifesto](https://gluu.co/govops-manifesto)  
-* GovOps control-plane analogy: [https://gluu.co/govops-boxing](https://gluu.co/govops-boxing)  
-* Cedar Policy Store draft specification: [https://gluu.co/rfc-101](https://gluu.co/rfc-101)  
-* Cedar RFC 101 (policy store): [https://github.com/cedar-policy/rfcs/pull/101](https://github.com/cedar-policy/rfcs/pull/101)
+* [GovOps Github Organization](https://github.com/GovOpsWG)
+* [GovOps Linkedin Group](https://www.linkedin.com/groups/17478011/)
+* Cedar Policy Store draft specification: [https://gluu.co/rfc-101](https://gluu.co/rfc-101)
 
-**GovOps Medium series (Gluu Federation):**
+**GovOps Medium series (Gluu):**
 
 * [Introducing GovOps](https://gluufederation.medium.com/introducing-govops-02063b72db4b)  
 * [GovOps Manifesto](https://gluufederation.medium.com/govops-manifesto-33eb7cb01ed3)  
