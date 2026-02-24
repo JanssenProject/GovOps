@@ -15,7 +15,7 @@ GovOps is a framework to help open source software projects facilitate enterpris
 
 ## **2\. Motivation**
 
-GovOps is a framework to help open source software projects facilitate enterprise risk management, accountability and transparency. At a high level, GovOps seeks to help humans govern **effectively, efficiently, and at scale** through traceable authorization pipelines.
+GovOps is a framework to help open source software projects facilitate enterprise **risk management**, **accountability** and **transparency**. At a high level, GovOps seeks to help humans govern **effectively**, **efficiently**, and at **scale** through traceable authorization pipelines.
 
 Compliance standards like ISO 27001 and SOC 2 define the minimum level of technical diligence an organization must demonstrate to align with well known security best practices. Compliance standards require that controls are in place to limit access, data and information to authorized entities for legitimate purposes. In the past, the assessment procedures for these controls were manual and periodic. GovOps seeks to provide an authorization governance mechanism that is interoperable in the open source supply chain to help organizations continuously prove compliance.
 
