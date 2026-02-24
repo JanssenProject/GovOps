@@ -9,7 +9,7 @@ GovOps Working Group
 ☐ Sandbox (initial)
 
 **Primary Focus Area:**  
-GovOps is a framework to help open source software projects facilitate enterprise risk management, accountability and transparency.
+Authorization Governance / Interoperable Policy Management and Analysis
 
 ---
 
