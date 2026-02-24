@@ -44,7 +44,7 @@ Traditional IGA focuses on *who has which role*. GovOps expands the scope to *wh
 **3\. Preserve Determinism While Increasing Expressiveness**  
 GovOps promotes policy models that remain deterministic and analyzable even as they grow more expressive than RBAC. This ensures governance remains provable: decisions must be traceable to explicit policy logic, and the space of permitted actions must be bounded and reviewable.
 
-**4\. Enable Formal Reasoning About Authorization Risk**  
+**4\. Document Reasoning About Authorization Risk**  
 A core objective is to standardize how organizations use formally defined, decidable policy languages to reason about authorization behavior across *all possible states*, not just individual access requests. For policies and mechanisms that are not machine-analyzable, GovOps defines how to scope and standardize review procedures so governance remains consistent. 
 
 **5\. Make Risk Measurable and Comparable**  
