@@ -92,13 +92,13 @@ The WG will **not**:
 
 | Existing Initiative | Relationship | Distinction |
 | :---- | ----- | ----- |
-| Global Cyber Policy WG | Complementary | Compliance is the minimum amount of security required to meet legal or business thresholds. Governance policies are a superset of compliance policies. Compliance alone is not sufficient for security. |
-| Gamara Project | Complementary | The model and lexicon defined by Gamara will be very useful for GovOps |
+| Global Cyber Policy WG | Complementary | Compliance doesn't detail how to govern authorization policies. |
+| Gamara Project | Complementary | The model and lexicon defined by Gamara will be used in GovOps |
 | Supply Chain Integrity WG | Adjacent | GovOps defines policy and decision artifacts, not software provenance. |
 | Best Practices WG | Complementary | GovOps defines operational governance, not coding practices. |
 | AI/ML Security WG | Adjacent | GovOps applies governance concepts across AI agents but is not AI-specific. |
 
-GovOps is a specific response to the need for formalization of a new practice and body of knowledge around governance. 
+GovOps is a specific response to the need for formalization of a new practice and body of knowledge around authorization governance. 
 
 ---
 
