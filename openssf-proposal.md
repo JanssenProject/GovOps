@@ -21,11 +21,11 @@ Compliance standards like ISO 27001 and SOC 2 require that controls are in place
 
 In the mid-2000s, Identity Governance and Administration (IGA) frameworks emerged to help enterprises govern **human workforce access to enterprise applications**. IGA systems inventory users, assign roles, and map those roles to permissions, enabling periodic access reviews and compliance reporting. GovOps builds on this foundation but addresses a broader risk surface: cloud infrastructure, APIs, service-to-service interactions, cross-domain federation, and autonomous or semi-autonomous software agents. These machine-driven capability surfaces were not first-class design targets for traditional IGA systems.
 
-IGA was designed to govern applications which implement role based access control (RBAC). Today's policy engines offer greater expressiveness then RBAC, but also introduce new governance challenges. As policies evolve from simple role mappings to condition-rich logic spanning multiple attributes, identity tokens, and graphs--the effective permission surface becomes too complex for IGA-style access certification. New abstractions, metrics, and analysis techniques are required to make modern policy ecosystems understandable and governable. Addressing this gap is a central motivation for GovOps.
+IGA was designed to govern applications which implement role based access control (RBAC). Today's policy engines offer greater expressiveness then RBAC, but also introduce new governance challenges. As policies evolve from simple role mappings to condition-rich logic spanning multiple attributes, identity tokens, and graphs--the effective permission surface becomes too complex for IGA-style access certification. New abstractions, metrics, and analysis techniques are required to make modern policy ecosystems understandable and governable. Addressing this gap is a central motivation for GovOps. GovOps elevates continuous access review and policy-driven assurance as the primary control, while preserving a defined role for attestation and certification where required by regulation or audit.
 
 Open source projects and the organizations that consume them need shared, vendor-neutral governance models and interoperable policy formats so that authorization can be reasoned about and assured across the supply chain—from upstream projects to downstream adopters—without lock-in to proprietary tooling. GovOps, developed in the open under the OpenSSF, gives the ecosystem common frameworks and specifications (such as a portable policy store format) that any project or vendor can implement and that enterprises can use to govern open source and hybrid deployments consistently.
 
-Developing these new governance practices requires collaboration among experts, vendors, and open-source communities with deep experience in identity, authorization, and distributed systems. The motivation for forming the GovOps Working Group under the OpenSSF is to create shared frameworks, terminology, models, and operational best practices necessary for consistent authorization governance across multi-domain, distributed software environments.
+Developing these new governance practices requires collaboration among experts, vendors, and open-source communities with deep experience in identity, authorization, and distributed systems. The WG welcomes participation from identity governance and IGA vendors, GRC and risk and compliance platforms, open source policy projects, and enterprises running hybrid human-and-machine governance. The motivation for forming the GovOps Working Group under the OpenSSF is to create shared frameworks, terminology, models, and operational best practices necessary for consistent authorization governance across multi-domain, distributed software environments.
 
 ---
 
@@ -80,6 +80,8 @@ The GovOps WG will:
 * Standardize **interoperable formats and specifications** that enable governance tooling  
 * Coordinate with existing OpenSSF WGs and Projects where policy intersects software supply chain security, compliance, identity, and tooling.
 
+GovOps outputs (metrics, evidence, control posture) are designed to be consumed by Governance, Risk and Compliance ("GRC") and risk management platforms so that authorization governance is a first-class, aggregatable control domain—not a replacement for enterprise GRC.
+
 ### **Out of Scope**
 
 The WG will **not**:
@@ -88,12 +90,16 @@ The WG will **not**:
 * Duplicate work of existing WGs focused on vulnerability disclosure, repositories, or secure coding, or compliance  
 * Mandate specific vendors, policy approaches or enforcement technologies
 
+IGA and identity platforms may implement GovOps frameworks in a variety of ways; the WG does not prescribe product architecture or policy engine choice.
+
 ---
 
 ## **5\. Relationship to Existing OpenSSF Initiatives**
 
 | Existing Initiative | Relationship | Distinction |
 | :---- | ----- | ----- |
+| IGA / Identity Governance vendors & practitioners | Complementary | GovOps frameworks and specs (policy store, schema, metrics) can be adopted by IGA and identity platforms to extend human-centric governance to machine identities and continuous policy; GovOps does not define or replace IGA workflows. |
+| GRC / Risk & Compliance platforms | Complementary | GovOps defines authorization governance metrics and assurance outputs that GRC and risk platforms can aggregate; GovOps does not duplicate enterprise GRC but provides a standardized control domain for authorization that GRC can consume and map to existing frameworks. |
 | Global Cyber Policy WG | Complementary | GovOps defines how to govern authorization policies and continuous assurance |
 | Gamara Project | Complementary | The model and lexicon defined by Gamara will be used in GovOps |
 | Supply Chain Integrity WG | Adjacent | GovOps defines policy and decision artifacts, not software provenance. |
@@ -112,14 +118,20 @@ GovOps is a specific response to the need for formalization of a new practice an
    * Statement of intent, values, and design principles  
    * Definitions, principles, and operating model  
    * Control planes (e.g., governance, identity, visibility, event)  
+   * The GovOps governance plane coordinates with identity systems (including IGA and identity providers) rather than replacing them; the identity plane remains the domain of those systems.  
+   * Control objectives and metrics are designed to be mappable to common control frameworks (e.g., NIST CSF, ISO 27001, SOC 2) so authorization governance can be reported alongside other domains in GRC and audit contexts.  
 2. **GovOps Metrics Model** 
    * What is measured: risk, transparency, accountability and other desired outcomes  
    * How are they measured: KPIs suitable for automation  
+   * The model is designed to integrate with or extend existing governance and IGA metrics so enterprises can maintain a unified view across governance, risk, and compliance reporting rather than replacing current reporting.  
+   * Where applicable, metrics and evidence align with or can be expressed in formats that GRC and compliance frameworks consume (e.g., OSCAL, Gamara or mappable control objectives).  
 3. **Standards**  
    * **Cedar Policy Store Specification**
      1. [Cedar RFC 101](https://github.com/cedar-policy/rfcs/pull/101)- Defines a portable, versioned, interoperable format for storing Cedar policies, schemas, entities, and issuer metadata.   
    * **Govops Schema**  
-     1. Standards for defining authorization policy schemas—entities, entity properties, actions, and resources—so policies are interoperable and analyzable.
+     1. Standards for defining authorization policy schemas—entities, entity properties, actions, and resources—so policies are interoperable and analyzable.  
+   
+   The policy store and schema work are intended to inform or align with other policy representations over time, so the WG remains inclusive of implementations using other policy engines.
 
 ---
 
