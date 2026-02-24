@@ -43,7 +43,7 @@ Traditional IGA focuses on *who has which role*. GovOps expands the scope to *wh
 GovOps promotes policy models that remain deterministic and analyzable even as they grow more expressive than RBAC. This ensures governance remains provable: decisions must be traceable to explicit policy logic, and the space of permitted actions must be bounded and reviewable.
 
 **4\. Enable Formal Reasoning About Authorization Risk**  
-A core objective is to standardize how organizations use formally defined, decidable policy languages to reason about authorization behavior across *all possible states*, not just individual access requests. Standardize manual processes to review all non-analyzable security policies and mechanisms. 
+A core objective is to standardize how organizations use formally defined, decidable policy languages to reason about authorization behavior across *all possible states*, not just individual access requests. For policies and mechanisms that are not machine-analyzable, GovOps defines how to scope and standardize review procedures so governance remains consistent. 
 
 **5\. Make Risk Measurable and Comparable**  
 GovOps seeks to define metrics that help humans prioritize remediation. Instead of asking only “Is this compliant?”, organizations should be able to ask:
@@ -117,7 +117,7 @@ GovOps is a specific response to the need for formalization of a new practice an
    * **Cedar Policy Store Specification**
      1. [Cedar RFC 101](https://github.com/cedar-policy/rfcs/pull/101)- Defines a portable, versioned, interoperable format for storing Cedar policies, schemas, entities, and issuer metadata.   
    * **Govops Schema**  
-     1. Standards for defining authoriozation policy schema in use -- the entities, entity properties, action and resources that are valid for policy.  
+     1. Standards for defining authorization policy schema in use -- the entities, entity properties, action and resources that are valid for policy.  
 
 ---
 
@@ -136,7 +136,7 @@ GovOps is a specific response to the need for formalization of a new practice an
 ## **8\. Governance and Operations**
 
 **Meeting Cadence:**  
-Weekly, public
+Bi-weekly (first and third Wednesday), public
 
 **Decision-Making Model:**  
 Consensus-based, per OpenSSF norms
@@ -148,7 +148,7 @@ Consensus-based, per OpenSSF norms
 * OpenSSF Slack channel
 * Public meeting notes and recordings
 
-## **9\. Initial Participants and Community Support**
+## **9. Initial Participants and Community Support**
 
 This proposal is supported by **at least three individuals from at least two organizations**.
 
@@ -168,7 +168,7 @@ This proposal is supported by **at least three individuals from at least two org
 
 ---
 
-## **9\. TAC Sponsor**
+## **10. TAC Sponsor**
 
 **TAC Sponsor:**  
 *TBD*
@@ -182,7 +182,7 @@ The TAC Sponsor agrees to:
 
 ---
 
-## **10\. Requested TAC Action**
+## **11. Requested TAC Action**
 
 The proponents respectfully request that the TAC:
 
