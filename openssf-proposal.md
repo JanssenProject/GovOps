@@ -43,7 +43,7 @@ Traditional IGA focuses on *who has which role*. GovOps expands the scope to *wh
 GovOps promotes policy models that remain deterministic and analyzable even as they grow more expressive than RBAC. This ensures governance remains provable: decisions must be traceable to explicit policy logic, and the space of permitted actions must be bounded and reviewable.
 
 **4\. Enable Formal Reasoning About Authorization Risk**  
-A core objective is to standardize how organizations use formally defined, decidable policy languages to reason about authorization behavior across *all possible states*, not just individual access requests. Technologies such as Cedar — originally developed at Amazon and contributed to the Cloud Native Computing Foundation — demonstrate how policy can become analyzable infrastructure. GovOps defines the governance practices required to manage such policies responsibly at scale.
+A core objective is to standardize how organizations use formally defined, decidable policy languages to reason about authorization behavior across *all possible states*, not just individual access requests. Standardize manual processes to review all non-analyzable security policies and mechanisms. 
 
 **5\. Make Risk Measurable and Comparable**  
 GovOps seeks to define metrics that help humans prioritize remediation. Instead of asking only “Is this compliant?”, organizations should be able to ask:
@@ -114,12 +114,10 @@ GovOps is a specific response to the need for formalization of a new practice an
    * What is measured: risk, transparency, accountability and other desired outcomes  
    * How are they measured: KPIs suitable for automation  
 3. **Standards**  
-   * Formats or protocols that are not covered by other standard bodies or open source efforts, but are necessary for governance interoperability.   
-   * [**Cedar**](https://www.cedarpolicy.com/) **Policy Store Specification**  
-     1. Would be the first, based on [Cedar RFC 101](https://github.com/cedar-policy/rfcs/pull/101), which is considered out-of-scope for the Cedar core standard.   
-     2. Defines a portable, versioned, interoperable format for storing Cedar policies, schemas, entities, and issuer metadata.   
-   * **Protobuf to Cedar Entity Mapping**  
-     1. Policy schema alignment is necessary for cross-domain authorization policies. 
+   * **Cedar Policy Store Specification**
+     1. [Cedar RFC 101](https://github.com/cedar-policy/rfcs/pull/101)- Defines a portable, versioned, interoperable format for storing Cedar policies, schemas, entities, and issuer metadata.   
+   * **Govops Schema**  
+     1. Standards for defining authoriozation policy schema in use -- the entities, entity properties, action and resources that are valid for policy.  
 
 ---
 
@@ -157,15 +155,15 @@ This proposal is supported by **at least three individuals from at least two org
 | ----- | ----- | ----- |
 | [Michael Schwartz](https://www.linkedin.com/in/nynymike) | Gluu | Proponent, Contributor |
 | [Rohit Khare](https://www.linkedin.com/in/rohitkhare/) | Independent | Proponent, Contributor |
-| [Amie Dsouza](https://www.linkedin.com/in/amie-amrita-dsouza-48b6537/) | Independent | Contributor |
+| [Darran Rolls](mailto:darran@identityinnovationlabs.com) | Independent | Contributor |
 | [Dinesh Rajasekharan](https://www.linkedin.com/in/dineshrajasekharan/) | Amazon | Contributor |
-| [Ravindra Neriyanuri](https://www.linkedin.com/in/ACoAAAARN2UB8NtUXyamGuRr52KppXTzVG2ltuo) | Independent | Contributor |
 | [André Koot](https://www.linkedin.com/in/meneer/) | SonicBee | Contributor |
+| [Amie Dsouza](https://www.linkedin.com/in/amie-amrita-dsouza-48b6537/) | Independent | Contributor |
 | [Bernard Diwakar](https://www.linkedin.com/in/bernarddiwakar/) | Intuit | Contributor |
 | [Manoj Kumar](https://www.linkedin.com/in/teampax/) | Pax Identity | Contributor |
 | [Kamal Govindaswamy](https://www.linkedin.com/in/kgswamy/) | Tueoris | Contributor |
+| [Ravindra Neriyanuri](https://www.linkedin.com/in/ACoAAAARN2UB8NtUXyamGuRr52KppXTzVG2ltuo) | Independent | Contributor |
 | [Brandon González](https://www.linkedin.com/in/bggp/)  | Independent | Contributor  |
-| [Darran Rolls](mailto:darran@identityinnovationlabs.com) | Independent | Contributor |
 
 ---
 
