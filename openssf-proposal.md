@@ -110,7 +110,7 @@ GovOps is a specific response to the need for formalization of a new practice an
    * Statement of intent, values, and design principles  
    * Definitions, principles, and operating model  
    * Control planes (e.g., governance, identity, visibility, event)  
-2. **GovOps Metrics Model**  
+2. **GovOps Metrics Model** 
    * What is measured: risk, transparency, accountability and other desired outcomes  
    * How are they measured: KPIs suitable for automation  
 3. **Standards**  
@@ -125,9 +125,9 @@ GovOps is a specific response to the need for formalization of a new practice an
 
 | Effort | Meeting Times | Agenda / Mtg Notes | Git Repo | Slack Channel | Mailing List |
 | :---- | :---- | :---- | :---- | :---- | :---- |
-| Full WG  | First and third Weds of month at 8am PST |  |  |  |  |
-| Cedar Policy Store | First Weds of the month at 10am PST  |  |  |  |  |
-| Protobuf / Cedar Mapping | Third Weds of the month at 10am PST |  |  |  |  |
+| Full WG  | First and third Weds of month at 10am PST |  |  |  |  |
+| Cedar Policy Store Group | First Weds of the month at 12pm PST  |  |  |  |  |
+| Schema Group | Third Weds of the month at 12pm PST |  |  |  |  |
 |  |  |  |  |  |  |
 
 ---
@@ -143,8 +143,9 @@ Consensus-based, per OpenSSF norms
 
 **Communication Channels:**
 
-* GitHub repository (WG \+ project)  
-* OpenSSF Slack channel  
+* GitHub repository (WG \+ project)
+* Linkedin Group
+* OpenSSF Slack channel
 * Public meeting notes and recordings
 
 ## **9\. Initial Participants and Community Support**
