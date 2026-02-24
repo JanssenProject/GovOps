@@ -23,6 +23,8 @@ In the mid-2000s, Identity Governance and Administration (IGA) frameworks emerge
 
 IGA was designed to govern applications which implement role based access control (RBAC). Today's policy engines offer greater expressiveness then RBAC, but also introduce new governance challenges. As policies evolve from simple role mappings to condition-rich logic spanning multiple attributes, identity tokens, and graphs--the effective permission surface becomes too complex for IGA-style access certification. New abstractions, metrics, and analysis techniques are required to make modern policy ecosystems understandable and governable. Addressing this gap is a central motivation for GovOps.
 
+Open source projects and the organizations that consume them need shared, vendor-neutral governance models and interoperable policy formats so that authorization can be reasoned about and assured across the supply chain—from upstream projects to downstream adopters—without lock-in to proprietary tooling. GovOps, developed in the open under the OpenSSF, gives the ecosystem common frameworks and specifications (such as a portable policy store format) that any project or vendor can implement and that enterprises can use to govern open source and hybrid deployments consistently.
+
 Developing these new governance practices requires collaboration among experts, vendors, and open-source communities with deep experience in identity, authorization, and distributed systems. The motivation for forming the GovOps Working Group under the OpenSSF is to create shared frameworks, terminology, models, and operational best practices necessary for consistent authorization governance across multi-domain, distributed software environments.
 
 ---
@@ -125,9 +127,9 @@ GovOps is a specific response to the need for formalization of a new practice an
 
 | Effort | Meeting Times | Agenda / Mtg Notes | Git Repo | Slack Channel | Mailing List |
 | :---- | :---- | :---- | :---- | :---- | :---- |
-| Full WG  | First and third Weds of month at 10am PST |  |  |  |  |
-| Cedar Policy Store Group | First Weds of the month at 12pm PST  |  |  |  |  |
-| Schema Group | Third Weds of the month at 12pm PST |  |  |  |  |
+| Full WG  | First and third Weds of month at 10am PST | TBD | TBD | TBD | TBD |
+| Cedar Policy Store Group | First Weds of the month at 12pm PST  | TBD | TBD | TBD | TBD |
+| Schema Group | Third Weds of the month at 12pm PST | TBD | TBD | TBD | TBD |
 |  |  |  |  |  |  |
 
 ---
@@ -189,6 +191,25 @@ The proponents respectfully request that the TAC:
 ☐ Review the proposed GovOps WG scope  
 ☐ Confirm limited overlap with existing initiatives  
 ☐ Approve creation of the GovOps Working Group at Sandbox stage  
-☐ Approve incubation of the Cedar Policy Store specification as the WG’s initial Project
+☐ Approve the Cedar Policy Store specification as the WG’s first deliverable—a specification produced and maintained by the GovOps WG itself, not a separate OpenSSF Project.
+
+---
+
+## **12. References**
+
+* GovOps overview and motivation: [https://gluu.co/govops](https://gluu.co/govops)  
+* GovOps metrics model: [https://gluu.co/govops-metrics](https://gluu.co/govops-metrics)  
+* GovOps manifesto: [https://gluu.co/govops-manifesto](https://gluu.co/govops-manifesto)  
+* GovOps control-plane analogy: [https://gluu.co/govops-boxing](https://gluu.co/govops-boxing)  
+* Cedar Policy Store draft specification: [https://gluu.co/rfc-101](https://gluu.co/rfc-101)  
+* Cedar RFC 101 (policy store): [https://github.com/cedar-policy/rfcs/pull/101](https://github.com/cedar-policy/rfcs/pull/101)
+
+**GovOps Medium series (Gluu Federation):**
+
+* [Introducing GovOps](https://gluufederation.medium.com/introducing-govops-02063b72db4b)  
+* [GovOps Manifesto](https://gluufederation.medium.com/govops-manifesto-33eb7cb01ed3)  
+* [Risk, Transparency, and Accountability: The Core Metrics of GovOps](https://gluufederation.medium.com/risk-transparency-and-accountability-the-core-metrics-of-govops-ff09c9ffb76b)  
+* [GovOps upgrades Access Certification to Access Review](https://gluufederation.medium.com/govops-upgrades-access-certification-to-access-review-2962c3dbf91f)  
+* [Enterprise Security needs Brains, Body, Eyes, and Muscles](https://gluufederation.medium.com/enterprise-security-needs-brains-body-eyes-and-muscles-cae7bd25e3e9)
 
 
