@@ -21,7 +21,7 @@ Compliance standards like ISO 27001 and SOC 2 require that controls are in place
 
 In the mid-2000s, Identity Governance and Administration (IGA) frameworks emerged to help enterprises govern **human workforce access to enterprise applications**. IGA systems inventory users, assign roles, and map those roles to permissions, enabling periodic access reviews and compliance reporting. GovOps builds on this foundation but addresses a broader risk surface: cloud infrastructure, APIs, service-to-service interactions, cross-domain federation, and autonomous or semi-autonomous software agents. These machine-driven capability surfaces were not first-class design targets for traditional IGA systems.
 
-IGA was designed to govern applications which implement role based access control (RBAC). Today's policy engines offer greater expressiveness then RBAC, but also introduce new governance challenges. As policies evolve from simple role mappings to condition-rich logic spanning multiple attributes, identity tokens, and graphs--the effective permission surface becomes too complex for IGA-style access certification. New abstractions, metrics, and analysis techniques are required to make modern policy ecosystems understandable and governable. Addressing this gap is a central motivation for GovOps. GovOps elevates continuous access review and policy-driven assurance as the primary control, while preserving a defined role for attestation and certification where required by regulation or audit.
+IGA was designed to govern applications which implement role based access control (RBAC). Today's policy engines offer greater expressiveness than RBAC, but also introduce new governance challenges. As policies evolve from simple role mappings to condition-rich logic spanning multiple attributes, identity tokens, and graphs--the effective permission surface becomes too complex for IGA-style access certification. New abstractions, metrics, and analysis techniques are required to make modern policy ecosystems understandable and governable. Addressing this gap is a central motivation for GovOps. GovOps elevates continuous access review and policy-driven assurance as the primary control, while preserving a defined role for attestation and certification where required by regulation or audit.
 
 Open source projects and the organizations that consume them need shared, vendor-neutral governance models and interoperable policy formats so that authorization can be reasoned about and assured across the supply chain—from upstream projects to downstream adopters—without lock-in to proprietary tooling. GovOps, developed in the open under the OpenSSF, gives the ecosystem common frameworks and specifications (such as a portable policy store format) that any project or vendor can implement: maintainers can declare and version policy with minimal overhead, and downstream consumers can verify or reason about the authorization behavior of components they adopt. Enterprises can use the same artifacts to govern open source and hybrid deployments consistently.
 
@@ -42,10 +42,10 @@ Governance must move from periodic, checklist-driven reviews to real-time or eve
 Traditional IGA focuses on *who has which role*. GovOps expands the scope to *which actions are possible on which resources under which conditions*. This enables governance over modern risk surfaces such as APIs, cloud services, machine identities, autonomous agents, and—for open source—release, build, and supply-chain boundaries, where role alone is insufficient to describe risk.
 
 **3\. Preserve Determinism While Increasing Expressiveness**  
-GovOps promotes policy models that remain deterministic and analyzable even as they grow more expressive than RBAC. This ensures governance remains provable: decisions must be traceable to explicit policy logic, and the space of permitted actions must be bounded and reviewable.
+GovOps promotes policy models that remain deterministic and amenable to automated analysis even as they grow more expressive than RBAC. This ensures governance remains provable: decisions must be traceable to explicit policy logic, and the set of permitted actions must have a finite representation (or be finitely enumerable) so that it is reviewable.
 
 **4\. Document Reasoning About Authorization Risk**  
-A core objective is to standardize how organizations and open source projects use formally defined, decidable policy languages to reason about authorization behavior across *all possible states*, not just individual access requests—so that downstream consumers can verify or reason about the authorization behavior of components they adopt. Where policy is machine-readable and composable across the supply chain, governance scales across projects and vendors. For policies and mechanisms that are not machine-analyzable, GovOps defines how to scope and standardize review procedures so governance remains consistent. 
+A core objective is to standardize how organizations and open source projects use formally specified policy languages (with well-defined semantics) to reason about authorization behavior for well-defined analysis tasks—e.g., safety over a bounded entity set—not only for individual access requests, so that downstream consumers can verify or reason about the authorization behavior of components they adopt. Where policy is machine-readable and designed to support composition across the supply chain (with composition semantics, e.g., precedence or override, specified where needed), governance scales across projects and vendors. For policies and mechanisms that are not machine-analyzable, GovOps defines how to scope and standardize review procedures so governance remains consistent. 
 
 **5\. Make Risk Measurable and Comparable**  
 GovOps seeks to define metrics that help humans—in enterprises and in open source projects—prioritize remediation. Instead of asking only “Is this compliant?”, organizations and maintainers should be able to ask:
@@ -117,22 +117,24 @@ GovOps is a specific response to the need for formalization of a new practice an
 1. **GovOps Framework**  
    * Statement of intent, values, and design principles  
    * Definitions, principles, and operating model  
-   * Control planes (e.g., governance, identity, visibility, event)  
+   * Control planes (e.g., governance, identity, visibility, event), with specified inputs, outputs, and invariants so implementations can be checked against a single model  
    * Guidance or patterns for open source and supply-chain use cases (e.g., release and build governance, consumer-verifiable policy)  
    * The GovOps governance plane coordinates with identity systems (including IGA and identity providers) rather than replacing them; the identity plane remains the domain of those systems.  
    * Control objectives and metrics are designed to be mappable to common control frameworks (e.g., NIST CSF, ISO 27001, SOC 2) so authorization governance can be reported alongside other domains in GRC and audit contexts.  
 2. **GovOps Metrics Model** 
    * What is measured: risk, transparency, accountability and other desired outcomes  
-   * How are they measured: KPIs suitable for automation  
+   * How are they measured: KPIs suitable for automation (each metric defined as a function from observables to values, where applicable)  
+   * At least one metric (e.g., transparency) given a concrete, formal definition to ensure automation and interoperability  
    * The model is designed to integrate with or extend existing governance and IGA metrics so enterprises can maintain a unified view across governance, risk, and compliance reporting rather than replacing current reporting.  
    * Metrics and KPIs are defined so they can be adopted by open source projects and maintainers (e.g., for release and supply-chain risk) as well as by enterprises.  
    * Where applicable, metrics and evidence align with or can be expressed in formats that GRC and compliance frameworks consume (e.g., OSCAL, Gamara or mappable control objectives).  
 3. **Standards**  
    * **Cedar Policy Store Specification**
-     1. [Cedar RFC 101](https://github.com/cedar-policy/rfcs/pull/101)- Defines a portable, versioned, interoperable format for storing Cedar policies, schemas, entities, and issuer metadata.   
+     1. [Cedar RFC 101](https://github.com/cedar-policy/rfcs/pull/101)—Defines a portable, versioned, interoperable format for storing Cedar policies, schemas, entities, and issuer metadata. The Policy Store spec defines representation and interchange only; authorization evaluation semantics remain defined by the underlying policy language (e.g., Cedar).   
    * **Govops Schema**  
      1. Standards for defining authorization policy schemas—entities, entity properties, actions, and resources—so policies are interoperable and analyzable.  
-   
+   * Composition semantics (e.g., how policies from multiple sources are combined or overridden) to be specified where needed, or explicitly scoped as future work.  
+
    The policy store and schema work are intended to inform or align with other policy representations over time, so the WG remains inclusive of implementations using other policy engines.
 
 ---
