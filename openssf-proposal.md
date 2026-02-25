@@ -15,7 +15,7 @@ Authorization Governance / Interoperable Policy Management and Analysis
 
 ## **2\. Motivation**
 
-GovOps is a framework to help open source software projects facilitate enterprise **risk management**, **accountability** and **transparency**. At a high level, GovOps seeks to help humans govern **effectively**, **efficiently**, and at **scale** through traceable authorization pipelines.
+GovOps is a framework to help open source software projects and enterprises achieve **risk management**, **accountability**, and **transparency**. At a high level, GovOps seeks to help humans—whether maintainers, project stewards, or enterprise operators—govern **effectively**, **efficiently**, and at **scale** through traceable authorization pipelines.
 
 Compliance standards like ISO 27001 and SOC 2 require that controls are in place to limit access, data and information to authorized entities for legitimate purposes. In the past, the assessment procedures for these controls were manual and periodic. GovOps seeks to provide an authorization governance mechanism that is interoperable in the open source supply chain to help organizations continuously prove compliance.
 
@@ -23,7 +23,7 @@ In the mid-2000s, Identity Governance and Administration (IGA) frameworks emerge
 
 IGA was designed to govern applications which implement role based access control (RBAC). Today's policy engines offer greater expressiveness then RBAC, but also introduce new governance challenges. As policies evolve from simple role mappings to condition-rich logic spanning multiple attributes, identity tokens, and graphs--the effective permission surface becomes too complex for IGA-style access certification. New abstractions, metrics, and analysis techniques are required to make modern policy ecosystems understandable and governable. Addressing this gap is a central motivation for GovOps. GovOps elevates continuous access review and policy-driven assurance as the primary control, while preserving a defined role for attestation and certification where required by regulation or audit.
 
-Open source projects and the organizations that consume them need shared, vendor-neutral governance models and interoperable policy formats so that authorization can be reasoned about and assured across the supply chain—from upstream projects to downstream adopters—without lock-in to proprietary tooling. GovOps, developed in the open under the OpenSSF, gives the ecosystem common frameworks and specifications (such as a portable policy store format) that any project or vendor can implement and that enterprises can use to govern open source and hybrid deployments consistently.
+Open source projects and the organizations that consume them need shared, vendor-neutral governance models and interoperable policy formats so that authorization can be reasoned about and assured across the supply chain—from upstream projects to downstream adopters—without lock-in to proprietary tooling. GovOps, developed in the open under the OpenSSF, gives the ecosystem common frameworks and specifications (such as a portable policy store format) that any project or vendor can implement: maintainers can declare and version policy with minimal overhead, and downstream consumers can verify or reason about the authorization behavior of components they adopt. Enterprises can use the same artifacts to govern open source and hybrid deployments consistently.
 
 Developing these new governance practices requires collaboration among experts, vendors, and open-source communities with deep experience in identity, authorization, and distributed systems. The WG welcomes participation from identity governance and IGA vendors, GRC and risk and compliance platforms, open source policy projects, and enterprises running hybrid human-and-machine governance. The motivation for forming the GovOps Working Group under the OpenSSF is to create shared frameworks, terminology, models, and operational best practices necessary for consistent authorization governance across multi-domain, distributed software environments.
 
@@ -31,40 +31,39 @@ Developing these new governance practices requires collaboration among experts, 
 
 ## **3\. Objective**
 
-The objective of GovOps is to define and operationalize **governance-as-ops**: a continuous, measurable, and accountable discipline that allows humans to understand, prioritize, and reduce software security risk at scale.
+The objective of GovOps is to define and operationalize **governance-as-ops**: a continuous, measurable, and accountable discipline that allows humans—in enterprises and in open source projects—to understand, prioritize, and reduce software security risk at scale, including across the supply chain and in federated, multi-project environments.
 
 Specifically, GovOps aims to establish a governance framework that:
 
 **1\. Makes Governance Continuous and Operational**  
-Governance must move from periodic, checklist-driven reviews to real-time control loops. GovOps defines how policies, telemetry, identity signals, and enforcement points work together as an operational system — where governance decisions are informed by live data, not static attestations.
+Governance must move from periodic, checklist-driven reviews to real-time or event-driven control loops where operational data exists. GovOps defines how policies, telemetry, identity signals, and enforcement points work together so that governance decisions are informed by declarative statements, not static attestations alone.
 
 **2\. Governs Capabilities, Not Just Identities**  
-Traditional IGA focuses on *who has which role*. GovOps expands the scope to *which actions are possible on which resources under which conditions*. This enables governance over modern risk surfaces such as APIs, cloud services, machine identities, and autonomous agents, where role alone is insufficient to describe risk.
+Traditional IGA focuses on *who has which role*. GovOps expands the scope to *which actions are possible on which resources under which conditions*. This enables governance over modern risk surfaces such as APIs, cloud services, machine identities, autonomous agents, and—for open source—release, build, and supply-chain boundaries, where role alone is insufficient to describe risk.
 
 **3\. Preserve Determinism While Increasing Expressiveness**  
 GovOps promotes policy models that remain deterministic and analyzable even as they grow more expressive than RBAC. This ensures governance remains provable: decisions must be traceable to explicit policy logic, and the space of permitted actions must be bounded and reviewable.
 
 **4\. Document Reasoning About Authorization Risk**  
-A core objective is to standardize how organizations use formally defined, decidable policy languages to reason about authorization behavior across *all possible states*, not just individual access requests. For policies and mechanisms that are not machine-analyzable, GovOps defines how to scope and standardize review procedures so governance remains consistent. 
+A core objective is to standardize how organizations and open source projects use formally defined, decidable policy languages to reason about authorization behavior across *all possible states*, not just individual access requests—so that downstream consumers can verify or reason about the authorization behavior of components they adopt. Where policy is machine-readable and composable across the supply chain, governance scales across projects and vendors. For policies and mechanisms that are not machine-analyzable, GovOps defines how to scope and standardize review procedures so governance remains consistent. 
 
 **5\. Make Risk Measurable and Comparable**  
-GovOps seeks to define metrics that help humans prioritize remediation. Instead of asking only “Is this compliant?”, organizations should be able to ask:
-
+GovOps seeks to define metrics that help humans—in enterprises and in open source projects—prioritize remediation. Instead of asking only “Is this compliant?”, organizations and maintainers should be able to ask:
 * What high-impact capabilities exist?  
 * Which are weakly governed?  
-* Where does policy coverage not match risk exposure?
+* Where does policy coverage not match risk exposure (including in supply chain or release process)?
 
-This enables leadership to allocate resources based on **risk reduction**, not audit cycles.
+This enables leadership and project stewards to allocate effort based on **risk reduction**, not audit cycles alone.
 
 **6\. Establish Accountability Across Humans and Systems**  
-When incidents occur, governance must support attribution: which policy allowed the action, which system enforced it, and which human or team owned that policy. GovOps promotes traceability across the full policy lifecycle — design, deployment, decision, and outcome.
+When incidents occur, governance must support attribution: which policy allowed the action, which system enforced it, and which human or team owned that policy. GovOps promotes traceability across the full policy lifecycle—design, deployment, decision, and outcome. In open source and federated contexts, where ownership can be diffuse (maintainers, orgs, foundations), GovOps supports accountability through explicit, auditable answers to who can publish, approve releases, or revoke access—so that authorization behavior remains transparent and reviewable by the community.
 
 **7\. Define Shared Models and Best Practices**  
-Through collaboration in the OpenSSF GovOps Working Group, this initiative will produce common terminology, reference architectures, control objectives, and operational practices. These artifacts will help vendors, open-source projects, and enterprises implement interoperable, governance-grade authorization in distributed, multi-domain environments.
+Through collaboration in the OpenSSF GovOps Working Group, this initiative will produce common terminology, reference architectures, control objectives, and operational practices. These artifacts will help vendors, open source projects, and enterprises implement interoperable, governance-grade authorization in distributed, multi-domain environments—enabling projects and maintainers to adopt governance-grade authorization with minimal overhead and making the authorization behavior of open source components transparent and verifiable to the ecosystem.
 
 ---
 
-In short, the objective of GovOps is to transform governance from a retrospective audit function into a **forward-looking operational capability** — one that continuously aligns technical authorization behavior with human intent, risk tolerance, and organizational accountability.
+In short, the objective of GovOps is to transform governance from a retrospective audit function into a **forward-looking operational capability**—one that continuously aligns technical authorization behavior with human intent, risk tolerance, and accountability in both enterprises and the open source ecosystem.
 
 ---
 
@@ -78,7 +77,8 @@ The GovOps WG will:
 * Develop **metrics and measurement models** for policy coverage, risk, and effectiveness  
 * Produce **reference architectures** for policy lifecycle management  
 * Standardize **interoperable formats and specifications** that enable governance tooling  
-* Coordinate with existing OpenSSF WGs and Projects where policy intersects software supply chain security, compliance, identity, and tooling.
+* Coordinate with existing OpenSSF WGs and Projects where policy intersects software supply chain security, compliance, identity, and tooling.  
+* Ensure frameworks and specifications are usable by open source projects and maintainers (e.g., declarative policy, minimal operational overhead) as well as by enterprises and GRC platforms.
 
 GovOps outputs (metrics, evidence, control posture) are designed to be consumed by Governance, Risk and Compliance ("GRC") and risk management platforms so that authorization governance is a first-class, aggregatable control domain—not a replacement for enterprise GRC.
 
@@ -118,12 +118,14 @@ GovOps is a specific response to the need for formalization of a new practice an
    * Statement of intent, values, and design principles  
    * Definitions, principles, and operating model  
    * Control planes (e.g., governance, identity, visibility, event)  
+   * Guidance or patterns for open source and supply-chain use cases (e.g., release and build governance, consumer-verifiable policy)  
    * The GovOps governance plane coordinates with identity systems (including IGA and identity providers) rather than replacing them; the identity plane remains the domain of those systems.  
    * Control objectives and metrics are designed to be mappable to common control frameworks (e.g., NIST CSF, ISO 27001, SOC 2) so authorization governance can be reported alongside other domains in GRC and audit contexts.  
 2. **GovOps Metrics Model** 
    * What is measured: risk, transparency, accountability and other desired outcomes  
    * How are they measured: KPIs suitable for automation  
    * The model is designed to integrate with or extend existing governance and IGA metrics so enterprises can maintain a unified view across governance, risk, and compliance reporting rather than replacing current reporting.  
+   * Metrics and KPIs are defined so they can be adopted by open source projects and maintainers (e.g., for release and supply-chain risk) as well as by enterprises.  
    * Where applicable, metrics and evidence align with or can be expressed in formats that GRC and compliance frameworks consume (e.g., OSCAL, Gamara or mappable control objectives).  
 3. **Standards**  
    * **Cedar Policy Store Specification**
