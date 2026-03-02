@@ -15,7 +15,7 @@ Authorization Governance / Interoperable Policy Management and Analysis
 
 ## **2\. Motivation**
 
-GovOps is a framework to help open source software projects and enterprises achieve **risk management**, **accountability**, and **transparency**. At a high level, GovOps seeks to help humans—whether maintainers, project stewards, or enterprise operators—govern **effectively**, **efficiently**, and at **scale** through traceable authorization pipelines.
+GovOps is a framework to help open source software projects and enterprises achieve **risk management**, **accountability**, and **transparency**. At a high level, GovOps seeks to help human "Governors"--whether maintainers, project stewards, or enterprise operators—-govern **effectively**, **efficiently**, and at **scale** through traceable authorization pipelines.
 
 Compliance standards like ISO 27001 and SOC 2 require that controls are in place to limit access, data and information to authorized entities for legitimate purposes. In the past, the assessment procedures for these controls were manual and periodic. GovOps seeks to provide an authorization governance mechanism that is interoperable in the open source supply chain to help organizations continuously prove compliance.
 
