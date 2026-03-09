@@ -103,7 +103,7 @@ IGA and identity platforms may implement GovOps frameworks in a variety of ways;
 | IGA / Identity Governance vendors & practitioners | Complementary | GovOps frameworks and specs (policy store, schema, metrics) can be adopted by IGA and identity platforms to extend human-centric governance to machine identities and continuous policy; GovOps does not define or replace IGA workflows. |
 | GRC / Risk & Compliance platforms | Complementary | GovOps defines authorization governance metrics and assurance outputs that GRC and risk platforms can aggregate; GovOps does not duplicate enterprise GRC but provides a standardized control domain for authorization that GRC can consume and map to existing frameworks. |
 | Global Cyber Policy WG | Complementary | The WG will define how to govern authorization policies and continuous assurance. |
-| Gamara Project | Complementary | The model and lexicon defined by Gamara will inform GovOps where applicable; the WG is not normatively dependent on Gamara. |
+| Gemara Project | Complementary | The model and lexicon defined by Gemara will inform GovOps where applicable; the WG is not normatively dependent on Gemara. |
 | Supply Chain Integrity WG | Adjacent | The WG defines policy and decision artifacts, not software provenance. |
 | Best Practices WG | Complementary | The WG defines operational governance, not coding practices. |
 | AI/ML Security WG | Adjacent | GovOps applies governance concepts across AI agents but is not AI-specific. |
