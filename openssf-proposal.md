@@ -96,7 +96,7 @@ IGA and identity platforms may implement GovOps frameworks in a variety of ways;
 
 ---
 
-## **5\. Relationship to Existing OpenSSF Initiatives**
+## **5\. Relationship to Existing Frameworks and OpenSSF Initiatives**
 
 | Existing Initiative | Relationship | Distinction |
 | :---- | ----- | ----- |
